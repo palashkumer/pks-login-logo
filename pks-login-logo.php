@@ -57,3 +57,8 @@ function pks_login_logo_menu_page()
         5
     );
 }
+
+function pks_hide_login_settings()
+{
+    include plugin_dir_path(__FILE__) . 'templates/settings-form.php';
+}
