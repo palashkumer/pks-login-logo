@@ -1,0 +1,105 @@
+/*
+========================= Login page customize=========
+
+*/
+body{
+    width: 1440px;
+    height: 1024px;
+    background: #FFF;
+    margin: auto;
+}
+
+.pks-login-navbar {
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.logo {
+    width: 218px;
+    height: 106px;
+    /* margin-left: 20px; */
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.buttons {
+    text-align: right; 
+}
+
+.buttons button {
+    width: 183px;
+    height: 55px;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 5px;
+    cursor: pointer;
+    border-radius: 15px;
+   
+}
+.forget-password {
+    background-color: #1D9BFF; 
+}
+.sign-up {
+    background-color: #1B49F6;
+    ; 
+}
+
+.buttons button a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.sign-up {
+    background-color: #1B49F6; 
+}
+
+
+
+
+
+/* 
+=====================Login Page Body======================
+*/
+
+.pks-login-body {
+    /* Your styles for the body section */
+    display: flex;
+    float: left;
+    width: 610px;
+    height: 600x;
+
+
+}
+div#login {
+    float: right;
+}
+
+/* 
+=====================Login Page Footer======================
+*/
+.social-icons {
+    width: 246px;
+    height: 39px;
+    position: absolute;
+    right: 13%;
+    bottom: 10%;
+}
+.social-icons a {
+    display: inline-block;
+    margin-right: 20px; 
+}
+.social-icons a:last-child {
+    margin-right: 0;
+}
+.social-icons a img {
+    width: 39px;
+    height: 38px;
+}
+
+/* ========BgC of Login page========== */
+
