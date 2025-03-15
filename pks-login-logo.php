@@ -6,7 +6,7 @@
  * Version:     1.0.0
  * Author:     Palash Kumer
  * Author URI:  
- * Text Domain: pks-hide-login
+ * Text Domain: pks-login-logo
  */
 
 // Define absolute path for security.

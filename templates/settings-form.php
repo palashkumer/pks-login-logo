@@ -3,20 +3,20 @@
 		<li class="active"><a data-toggle="tab" href="#login_logo">Login Logo</a></li>
 		<li><a data-toggle="tab" href="#login_page_style">Login Page Style</a></li>
 		<li> <a data-toggle="tab" href="#login_page_template">Customize Template</a></li>
-		<li> <a data-toggle="tab" href="#ihl-google-catcha">Google Recaptcha</a></li>
+		<li> <a data-toggle="tab" href="#pks-google-catcha">Google Recaptcha</a></li>
 		<li><a data-toggle="tab" href="#login_limits">Login Limit</a></li>
 		<!-- <li><a data-toggle="tab" href="#login_url">Login URL</a></li> -->
 	</ul>
 	<div class="tab-content">
-		<div class="tab-pane fade in active ihl-setting" id="login_logo">
+		<div class="tab-pane fade in active pks-setting" id="login_logo">
 			<form method="post" action="" id="logo-form">
 				<h2>Change Login Logo</h2>
 				<div class="login-logo">
 					<div class="wrapDiv logo-uploadDiv">
 						<label class="logoUpLabel" for="upload_image">Login Logo</label>
-						<img id="image-preview" src="<?php echo esc_attr($ihl_logo_submitted_url ?: $ihl_logo_current_url); ?>" alt="Logo Preview" />
-						<input type="button" id="ihl_logo_button" class="button-secondary" value="Upload Logo">
-						<input type="text" id="ihl_login_logo" style="display: none;" name="ihl_login_logo" class="regular-text" value="<?php echo esc_attr($ihl_logo_submitted_url ?: $ihl_logo_current_url); ?>" />
+						<img id="image-preview" src="<?php echo esc_attr($pks_logo_submitted_url ?: $pks_logo_current_url); ?>" alt="Logo Preview" />
+						<input type="button" id="pks_logo_button" class="button-secondary" value="Upload Logo">
+						<input type="text" id="pks_login_logo" style="display: none;" name="pks_login_logo" class="regular-text" value="<?php echo esc_attr($pks_logo_submitted_url ?: $pks_logo_current_url); ?>" />
 					</div>
 
 					<div class="wrapDiv ">
@@ -42,72 +42,72 @@
 		<div id="login_page_style" class="tab-pane fade">
 			<div class="login-page-style">
 				<h2>Customize Login Page</h2>
-				<form method="post" action="" id="ihl-login-page-bg-form">
+				<form method="post" action="" id="pks-login-page-bg-form">
 					<div class="login-bg-setting">
 						<div class="bg-setting">
 							<h4>Background Settings</h4>
 						</div>
-						<div class="ihl_login_page_bg_color ihl_bg_inside">
-							<label for="ihl_login_page_bg_color">Background Color</label>
-							<input type="color" id="ihl_login_page_bg_color" name="ihl_login_page_bg_color" value="<?php echo esc_attr(get_option('ihl_login_page_bg_color', '#ffffff')); ?>">
+						<div class="pks_login_page_bg_color pks_bg_inside">
+							<label for="pks_login_page_bg_color">Background Color</label>
+							<input type="color" id="pks_login_page_bg_color" name="pks_login_page_bg_color" value="<?php echo esc_attr(get_option('pks_login_page_bg_color', '#ffffff')); ?>">
 						</div>
-						<div class="ihl_login_page_bg_img ihl_bg_inside">
+						<div class="pks_login_page_bg_img pks_bg_inside">
 							<label id="lodin-page-label" class="" for="upload_image">Background Image</label>
-							<input type="text" id="ihl_login_page_bg_img" name="ihl_login_page_bg_img" class="regular-text" value="<?php echo esc_attr($ihl_bg_img_submitted_url ?: $ihl_bg_img_current_url); ?>" />
+							<input type="text" id="pks_login_page_bg_img" name="pks_login_page_bg_img" class="regular-text" value="<?php echo esc_attr($pks_bg_img_submitted_url ?: $pks_bg_img_current_url); ?>" />
 
-							<input type="button" id="ihl_login_page_bg_img_button" class="ihl_login_page_bg_img_button-btn" value="Upload Image">
+							<input type="button" id="pks_login_page_bg_img_button" class="pks_login_page_bg_img_button-btn" value="Upload Image">
 						</div>
 					</div>
 					<div class="login_form_setting">
 						<div class="login-form-setting">
 							<h4>Form Setting</h4>
 						</div>
-						<div class="ihl-login-form-position ihl_bg_inside">
-							<label for="ihl_login_form_position">Login Form Position</label>
-							<select id="ihl_login_form_position" name="ihl_login_form_position">
-								<option value="center" <?php selected(get_option('ihl_login_form_position'), 'center'); ?>>Center</option>
-								<option value="top-left" <?php selected(get_option('ihl_login_form_position'), 'top-left'); ?>>Top Left</option>
-								<option value="top-right" <?php selected(get_option('ihl_login_form_position'), 'top-right'); ?>>Top Right</option>
-								<option value="bottom-left" <?php selected(get_option('ihl_login_form_position'), 'bottom-left'); ?>>Bottom Left</option>
-								<option value="bottom-right" <?php selected(get_option('ihl_login_form_position'), 'bottom-right'); ?>>Bottom Right</option>
+						<div class="pks-login-form-position pks_bg_inside">
+							<label for="pks_login_form_position">Login Form Position</label>
+							<select id="pks_login_form_position" name="pks_login_form_position">
+								<option value="center" <?php selected(get_option('pks_login_form_position'), 'center'); ?>>Center</option>
+								<option value="top-left" <?php selected(get_option('pks_login_form_position'), 'top-left'); ?>>Top Left</option>
+								<option value="top-right" <?php selected(get_option('pks_login_form_position'), 'top-right'); ?>>Top Right</option>
+								<option value="bottom-left" <?php selected(get_option('pks_login_form_position'), 'bottom-left'); ?>>Bottom Left</option>
+								<option value="bottom-right" <?php selected(get_option('pks_login_form_position'), 'bottom-right'); ?>>Bottom Right</option>
 							</select>
 						</div>
-						<div class="ihl-login-form-width ihl_bg_inside">
-							<label for="ihl_login_form_width">Login Form Width</label>
-							<input type="number" id="ihl_login_form_width" name="ihl_login_form_width" value="<?php echo esc_attr(get_option('ihl_login_form_width', '320')); ?>" min="320"> px
+						<div class="pks-login-form-width pks_bg_inside">
+							<label for="pks_login_form_width">Login Form Width</label>
+							<input type="number" id="pks_login_form_width" name="pks_login_form_width" value="<?php echo esc_attr(get_option('pks_login_form_width', '320')); ?>" min="320"> px
 						</div>
 
-						<div class="ih-login-form-color ihl_bg_inside">
-							<label for="ihl_login_form_color">Login Form Color</label>
-							<input type="color" id="ihl_login_form_color" name="ihl_login_form_color" value="<?php echo esc_attr(get_option('ihl_login_form_color', '#ffffff')); ?>">
+						<div class="ih-login-form-color pks_bg_inside">
+							<label for="pks_login_form_color">Login Form Color</label>
+							<input type="color" id="pks_login_form_color" name="pks_login_form_color" value="<?php echo esc_attr(get_option('pks_login_form_color', '#ffffff')); ?>">
 						</div>
-						<div class="ihl-login-label-color ihl_bg_inside">
-							<label for="ihl_login_label_color">Label Color</label>
-							<input type="color" id="ihl_login_label_color" name="ihl_login_label_color" value="<?php echo esc_attr(get_option('ihl_login_label_color', '#212121')); ?>">
+						<div class="pks-login-label-color pks_bg_inside">
+							<label for="pks_login_label_color">Label Color</label>
+							<input type="color" id="pks_login_label_color" name="pks_login_label_color" value="<?php echo esc_attr(get_option('pks_login_label_color', '#212121')); ?>">
 						</div>
-						<div class="ihl-login-form-label-size ihl_bg_inside">
-							<label for="ihl_login_form_label_size">Login Form Label Size</label>
-							<input type="number" id="ihl_login_form_label_size" name="ihl_login_form_label_size" value="<?php echo esc_attr(get_option('ihl_login_form_label_size', '16')); ?>" min="14"> px
+						<div class="pks-login-form-label-size pks_bg_inside">
+							<label for="pks_login_form_label_size">Login Form Label Size</label>
+							<input type="number" id="pks_login_form_label_size" name="pks_login_form_label_size" value="<?php echo esc_attr(get_option('pks_login_form_label_size', '16')); ?>" min="14"> px
 						</div>
-						<div class="ihl-login-form-border-radius ihl_bg_inside">
-							<label for="ihl_login_form_border_radius">Login Form Border Radius</label>
-							<input type="number" id="ihl_login_form_border_radius" name="ihl_login_form_border_radius" value="<?php echo esc_attr(get_option('ihl_login_form_border_radius', '5')); ?>" max="15"> px
+						<div class="pks-login-form-border-radius pks_bg_inside">
+							<label for="pks_login_form_border_radius">Login Form Border Radius</label>
+							<input type="number" id="pks_login_form_border_radius" name="pks_login_form_border_radius" value="<?php echo esc_attr(get_option('pks_login_form_border_radius', '5')); ?>" max="15"> px
 						</div>
-						<div class="ihl-login-form-border-color ihl_bg_inside">
-							<label for="ihl_login_form_border_color">Login Form Border Color</label>
-							<input type="color" id="ihl_login_form_border_color" name="ihl_login_form_border_color" value="<?php echo esc_attr(get_option('ihl_login_form_border_color', '#212121')); ?>">
+						<div class="pks-login-form-border-color pks_bg_inside">
+							<label for="pks_login_form_border_color">Login Form Border Color</label>
+							<input type="color" id="pks_login_form_border_color" name="pks_login_form_border_color" value="<?php echo esc_attr(get_option('pks_login_form_border_color', '#212121')); ?>">
 						</div>
-						<div class="ihl=login-form_input-field-color ihl_bg_inside">
-							<label for="ihl_login_input_field_color">Input Field Color</label>
-							<input type="color" id="ihl_login_input_field_color" name="ihl_login_input_field_color" value="<?php echo esc_attr(get_option('ihl_login_input_field_color', '#ffffff')); ?>">
+						<div class="pks=login-form_input-field-color pks_bg_inside">
+							<label for="pks_login_input_field_color">Input Field Color</label>
+							<input type="color" id="pks_login_input_field_color" name="pks_login_input_field_color" value="<?php echo esc_attr(get_option('pks_login_input_field_color', '#ffffff')); ?>">
 						</div>
-						<div class="ihl-login-form_input-field-border-color ihl_bg_inside">
-							<label for="ihl_login_input_field_border_color">Input Field Border Color</label>
-							<input type="color" id="ihl_login_input_field_border_color" name="ihl_login_input_field_border_color" value="<?php echo esc_attr(get_option('ihl_login_input_field_border_color', '#212121')); ?>">
+						<div class="pks-login-form_input-field-border-color pks_bg_inside">
+							<label for="pks_login_input_field_border_color">Input Field Border Color</label>
+							<input type="color" id="pks_login_input_field_border_color" name="pks_login_input_field_border_color" value="<?php echo esc_attr(get_option('pks_login_input_field_border_color', '#212121')); ?>">
 						</div>
-						<div class="ihl-input-field-border-radius ihl_bg_inside">
-							<label for="ihl_login_input_field_border_radius">Input Field Border Radius</label>
-							<input type="number" id="ihl_login_input_field_border_radius" name="ihl_login_input_field_border_radius" value="<?php echo esc_attr(get_option('ihl_login_input_field_border_radius', '5')); ?>" max="10"> px
+						<div class="pks-input-field-border-radius pks_bg_inside">
+							<label for="pks_login_input_field_border_radius">Input Field Border Radius</label>
+							<input type="number" id="pks_login_input_field_border_radius" name="pks_login_input_field_border_radius" value="<?php echo esc_attr(get_option('pks_login_input_field_border_radius', '5')); ?>" max="10"> px
 						</div>
 
 					</div>
@@ -115,30 +115,30 @@
 						<div class="button_setting">
 							<h4>Button Setting</h4>
 						</div>
-						<div class="ihl_login_btn ihl_bg_inside">
-							<label for="ihl_login_btn_color">Login Button Color</label>
-							<input type="color" id="ihl_login_btn_color" name="ihl_login_btn_color" value="<?php echo esc_attr(get_option('ihl_login_btn_color', '#2271b1')); ?>">
+						<div class="pks_login_btn pks_bg_inside">
+							<label for="pks_login_btn_color">Login Button Color</label>
+							<input type="color" id="pks_login_btn_color" name="pks_login_btn_color" value="<?php echo esc_attr(get_option('pks_login_btn_color', '#2271b1')); ?>">
 						</div>
-						<div class="ihl_login_text_btn ihl_bg_inside">
-							<label for="ihl_login_btn_text_color">Login Button Text Color</label>
-							<input type="color" id="ihl_login_btn_text_color" name="ihl_login_btn_text_color" value="<?php echo esc_attr(get_option('ihl_login_btn_text_color', '#ffffff')); ?>">
+						<div class="pks_login_text_btn pks_bg_inside">
+							<label for="pks_login_btn_text_color">Login Button Text Color</label>
+							<input type="color" id="pks_login_btn_text_color" name="pks_login_btn_text_color" value="<?php echo esc_attr(get_option('pks_login_btn_text_color', '#ffffff')); ?>">
 						</div>
-						<div class="ihl_login_btn_hover ihl_bg_inside">
-							<label for="ihl_login_btn_hover_color">Login Button Color Hover</label>
-							<input type="color" id="ihl_login_btn_hover_color" name="ihl_login_btn_hover_color" value="<?php echo esc_attr(get_option('ihl_login_btn_hover_color', '#2271b1')); ?>">
+						<div class="pks_login_btn_hover pks_bg_inside">
+							<label for="pks_login_btn_hover_color">Login Button Color Hover</label>
+							<input type="color" id="pks_login_btn_hover_color" name="pks_login_btn_hover_color" value="<?php echo esc_attr(get_option('pks_login_btn_hover_color', '#2271b1')); ?>">
 						</div>
-						<div class="ihl_login_btn_border ihl_bg_inside">
-							<label for="ihl_login_btn_border_color">Login Button Border Color</label>
-							<input type="color" id="ihl_login_btn_border_color" name="ihl_login_btn_border_color" value="<?php echo esc_attr(get_option('ihl_login_btn_border_color', '#212121')); ?>">
+						<div class="pks_login_btn_border pks_bg_inside">
+							<label for="pks_login_btn_border_color">Login Button Border Color</label>
+							<input type="color" id="pks_login_btn_border_color" name="pks_login_btn_border_color" value="<?php echo esc_attr(get_option('pks_login_btn_border_color', '#212121')); ?>">
 						</div>
-						<div class="ihl_login_btn_border ihl_bg_inside">
-							<label for="ihl_login_btn_border_radius">Login Button Border Radius</label>
-							<input type="number" id="ihl_login_btn_border_radius" name="ihl_login_btn_border_radius" value="<?php echo esc_attr(get_option('ihl_login_btn_border_radius',)); ?>" max="10"> px
+						<div class="pks_login_btn_border pks_bg_inside">
+							<label for="pks_login_btn_border_radius">Login Button Border Radius</label>
+							<input type="number" id="pks_login_btn_border_radius" name="pks_login_btn_border_radius" value="<?php echo esc_attr(get_option('pks_login_btn_border_radius',)); ?>" max="10"> px
 						</div>
 
-						<div class="ihl_login_btn_width ihl_bg_inside">
-							<label for="ihl_login_btn_width">Login Button Width</label>
-							<input type="number" id="ihl_login_btn_width" name="ihl_login_btn_width" value="<?php echo esc_attr(get_option('ihl_login_btn_width',)); ?>" min="65"> px
+						<div class="pks_login_btn_width pks_bg_inside">
+							<label for="pks_login_btn_width">Login Button Width</label>
+							<input type="number" id="pks_login_btn_width" name="pks_login_btn_width" value="<?php echo esc_attr(get_option('pks_login_btn_width',)); ?>" min="65"> px
 						</div>
 
 					</div>
@@ -147,17 +147,17 @@
 						<div class="lost_pw_blog">
 							<h4>Lost Password and Back To Blog</h4>
 						</div>
-						<div class="ihl_nav_links_color ihl_bg_inside">
-							<label for="ihl_nav_links_color">Navigation Links Color</label>
-							<input type="color" id="ihl_nav_links_color" name="ihl_nav_links_color" value="<?php echo esc_attr(get_option('ihl_nav_links_color', '#212121')); ?>">
+						<div class="pks_nav_links_color pks_bg_inside">
+							<label for="pks_nav_links_color">Navigation Links Color</label>
+							<input type="color" id="pks_nav_links_color" name="pks_nav_links_color" value="<?php echo esc_attr(get_option('pks_nav_links_color', '#212121')); ?>">
 						</div>
-						<div class="ihl_nav_links_hover_color ihl_bg_inside">
-							<label for="ihl_nav_links_hover_color">Navigation Links Hover Color</label>
-							<input type="color" id="ihl_nav_links_hover_color" name="ihl_nav_links_hover_color" value="<?php echo esc_attr(get_option('ihl_nav_links_hover_color', '#025ae8')); ?>">
+						<div class="pks_nav_links_hover_color pks_bg_inside">
+							<label for="pks_nav_links_hover_color">Navigation Links Hover Color</label>
+							<input type="color" id="pks_nav_links_hover_color" name="pks_nav_links_hover_color" value="<?php echo esc_attr(get_option('pks_nav_links_hover_color', '#025ae8')); ?>">
 						</div>
-						<div class="ihl_nav_links_size ihl_bg_inside">
-							<label for="ihl_nav_links_size">Navigation Links Size</label>
-							<input type="number" id="ihl_nav_links_size" name="ihl_nav_links_size" value="<?php echo esc_attr(get_option('ihl_nav_links_size',)); ?>" max="20px"> px
+						<div class="pks_nav_links_size pks_bg_inside">
+							<label for="pks_nav_links_size">Navigation Links Size</label>
+							<input type="number" id="pks_nav_links_size" name="pks_nav_links_size" value="<?php echo esc_attr(get_option('pks_nav_links_size',)); ?>" max="20px"> px
 						</div>
 
 					</div>
@@ -175,24 +175,24 @@
 			<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, harum.</p>
 		</div>
 
-		<div id="ihl-google-catcha" class="tab-pane fade">
-			<div class="ihl-google-catcha">
+		<div id="pks-google-catcha" class="tab-pane fade">
+			<div class="pks-google-catcha">
 				<h2>Google ReCaptcha</h2>
 
 				<p class="capthca_desc">You need to <a href="https://www.google.com/recaptcha/admin" rel="external">click here </a> to get Site and Secret keys For V2 of Google recaptcha to make ReCaptcha work.</p>
-				<form action="" method="post" id="ihl_captcha_form">
-					<div class="ihl_site_key">
-						<label for="ihl_site_key">Site key</label>
-						<input type="text" id="ihl_site_key" name="ihl_site_key" value="<?php echo esc_attr(get_option('ihl_site_key')); ?>" required />
+				<form action="" method="post" id="pks_captcha_form">
+					<div class="pks_site_key">
+						<label for="pks_site_key">Site key</label>
+						<input type="text" id="pks_site_key" name="pks_site_key" value="<?php echo esc_attr(get_option('pks_site_key')); ?>" required />
 						<small class="form-text text-muted">Enter your site key provided by the captcha service.</small>
 					</div>
-					<div class="ihl_secret_key">
-						<label for="ihl_secret_key">Secret key</label>
-						<input type="text" id="ihl_secret_key" name="ihl_secret_key" value="<?php echo esc_attr(get_option('ihl_secret_key')); ?>" required />
+					<div class="pks_secret_key">
+						<label for="pks_secret_key">Secret key</label>
+						<input type="text" id="pks_secret_key" name="pks_secret_key" value="<?php echo esc_attr(get_option('pks_secret_key')); ?>" required />
 						<small class="form-text text-muted">Enter your secret key provided by the captcha service.</small>
 					</div>
 					<p class="submit">
-						<input type="submit" name="ihl_captcha_submit" class="button-primary" value="Save Changes">
+						<input type="submit" name="pks_captcha_submit" class="button-primary" value="Save Changes">
 					</p>
 				</form>
 			</div>
@@ -233,8 +233,8 @@
 </div>
 <script>
 	jQuery(document).ready(function($) {
-		var ihl_bg_img = document.getElementById("ihl_login_page_bg_img_button");
-		ihl_bg_img.addEventListener("click", function(e) {
+		var pks_bg_img = document.getElementById("pks_login_page_bg_img_button");
+		pks_bg_img.addEventListener("click", function(e) {
 
 
 			var customUploader = wp.media({
@@ -247,13 +247,13 @@
 
 			customUploader.on("select", function() {
 				var attachment = customUploader.state().get("selection").first().toJSON();
-				$("#ihl_login_page_bg_img").val(attachment.url);
+				$("#pks_login_page_bg_img").val(attachment.url);
 
 			});
 
 			customUploader.on("select", function() {
 				var attachment = customUploader.state().get("selection").first().toJSON();
-				$("#ihl_login_page_bg_img").val(attachment.url);
+				$("#pks_login_page_bg_img").val(attachment.url);
 
 			});
 
@@ -261,9 +261,9 @@
 			customUploader.open();
 
 		});
-		var ihlLoginPageForm = document.getElementById("ihl-login-page-bg-form");
+		var pksLoginPageForm = document.getElementById("pks-login-page-bg-form");
 		// Capture form submission and prevent the default behavior
-		ihlLoginPageForm.addEventListener("submit", function(event) {
+		pksLoginPageForm.addEventListener("submit", function(event) {
 			event.preventDefault();
 			alert("Settings Successfully Changed!");
 			this.submit();
